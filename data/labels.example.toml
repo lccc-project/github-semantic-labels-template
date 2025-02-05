@@ -1,5 +1,47 @@
 # This is not a semantically used file: Rename to `labels.toml` and fill in data below
+# This includes some suggested labels
 [groups]
 # Specify label groups here. Each should get a name, followed by either a string, which is a pattern, or an object.
 # The object has fields: pattern and repeatable
 # pattern is set to a string, and is the format of the label
+
+[groups.area]
+pattern = "A-{}"
+colour = "c2a504"
+# labels = ["bar", "baz"]
+
+[groups.status]
+pattern = "S-{}"
+colour = "947c06"
+labels = [
+    "blocked-on-author",
+    "blocked-on-reviewer",
+    "dormant",
+    "needs-design",
+    "needs-documentation",
+]
+
+[groups.category]
+pattern = "C-{}"
+repeatable = false
+colour = "86949c"
+labels = [
+    "bug",
+    "feature-request",
+    "tracking-issue",
+    "feature-accepted",
+    "cleanup",
+    "discussion",
+    "enhancement",
+    "open-question",
+]
+
+[groups.team]
+pattern = "T-{}"
+colour = "d82d16"
+# labels = []
+
+[groups.issue-types]
+pattern = "I-{}"
+labels = []
+colour = "800000"
