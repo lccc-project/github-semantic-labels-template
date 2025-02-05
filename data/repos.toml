@@ -1,0 +1,12 @@
+[repos]
+lccc = "lccc-project/lccc"
+lc-binutils = "lccc-project/lc-binutils"
+governance = "lccc-project/Governance"
+rtlibs = "lccc-project/rtlibs"
+hash-generator = "lccc-project/hash-generator"
+lccc-siphash = "lccc-project/lccc-siphash"
+rustc-codegen-xlang = "lccc-project/rustc-codegen-xlang"
+xir-op = "lccc-project/xir-op"
+
+[allowed-labels]
+all=["wontfix"]

@@ -1,0 +1,81 @@
+
+[groups.area]
+pattern = "A-{}"
+colour = "c2a504"
+
+[groups.area.subgroups.rtlibs]
+pattern = "rtlibs-{}"
+labels = ["sfp", "atomic", "unwind", "compsp"]
+repos = ["rtlibs"]
+
+[groups.area.subgroups.xlang]
+pattern = "xlang-{}"
+description = "An issue related to xlang {stem}"
+labels = ["ir", "struct","abi","host","frontend","codegen","plugins"]
+repos = ["lccc","xir-op"]
+
+[groups.area.subgroups.rust]
+pattern = "rust-{}"
+description = "An issue related to the rust frontend's {stem}"
+labels = ["type-checking","lexer","parser","macro","sema","irgen","intrin", "proc-macro", "stdlib", "panic", "abi"]
+repos = ["lccc"]
+
+[groups.area.arch-ops]
+repos = ["lc-binutils"]
+description = "An issue related to arch-ops"
+
+[groups.area.binfmt]
+repos = ["lc-binutils"]
+description = "An issue related to binfmt"
+
+[groups.area.binutils]
+repos = ["lc-binutils"]
+description = "An issue related to a tool program (ar, objdump, objcopy, etc.)"
+
+[groups.area.lcas]
+repos = ["lc-binutils"]
+description = "An issue related to lc-as"
+
+[groups.area.lcld]
+repos = ["lc-binutils"]
+description = "An issue related to lcld"
+
+[groups.category]
+pattern = "C-{}"
+repeatable = false
+colour = "86949c"
+labels = ["bug", "feature-request", "tracking-issue", "feature-accepted","cleanup","discussion","enhancement","open-question", "gub"]
+description = "Category: {stem}"
+
+[groups.features]
+pattern = "F-{}"
+colour="82029c"
+
+
+[groups.features.subgroups.rust]
+description = "An issue related to the implementation of the Rust feature {stem}"
+labels = [] # Todo: Figure out a good way to autogen this list
+pattern = "rust-{}"
+repos=["lccc"]
+
+[groups.issue-types]
+pattern = "I-{}"
+labels = ["unsound","noncompliance", "hang", "crash", "ICE", "heavy", "slow", "compiletime", "unclear", "spec-hole", "defect"]
+colour = "800000"
+
+[groups.target]
+pattern="O-{}"
+labels=["x86","arm", "risv", "w65", "x86-16", "x86-32", "x86-64","holeybytes","windows","darwin","linux","ableos","lilium","elf","macho","pe","coff"]
+colour="3b2b70"
+
+[groups.language]
+pattern="L-{}"
+labels = ["rust","c++", "c"]
+colour="3a992f"
+description="Language: {stem}"
+repos=["lccc"]
+
+[groups.status]
+pattern="S-{}"
+colour="947c06"
+labels=["blocked-on-submitter", "blocked-on-maintainer", "blocked-on-standardization", "dormant", "needs-design","needs-documentation"]

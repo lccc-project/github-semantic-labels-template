@@ -1,0 +1,6 @@
+[repos]
+# foo = "myorg/foo"
+
+[allowed-labels]
+# all=["wontfix"]
+# foo=["funny"]

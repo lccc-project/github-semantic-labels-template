@@ -1,0 +1,25 @@
+# Make sure to enable this workflow on uses
+on: push
+
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        steps:
+        - name: "Update rust"
+          run: |
+            rustup update
+            rustup toolchain install nightly
+            rustup default nightly
+        - name: "Checkout repository"
+          uses: actions/checkout@v3
+        - name: "Build Package"
+          working-directory: ${{github.workspace}}
+          run: |
+            cargo build
+        - name: "Run Package"
+          working-directory: ${{github.workspace}}
+          env: 
+            GITHUB_TOKEN: ${{secrets.ISSUES_GITHUB_TOKEN}}
+          run: |
+            cargo run
+        

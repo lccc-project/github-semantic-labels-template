@@ -1,0 +1,5 @@
+# This is not a semantically used file: Rename to `labels.toml` and fill in data below
+[groups]
+# Specify label groups here. Each should get a name, followed by either a string, which is a pattern, or an object.
+# The object has fields: pattern and repeatable
+# pattern is set to a string, and is the format of the label
